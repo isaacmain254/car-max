@@ -8,6 +8,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
+import Logo from "@/images/Carmax.svg";
+
 // navigation link
 const navlink = [
   {
@@ -50,17 +52,15 @@ export const Navbar = () => {
   };
   return (
     <header>
-      <nav className="flex mx-auto lg:px-8 items-center justify-between relative">
-        <div className="flex relative w-36 h-14 overflow-hidden">
-          <a href="#">
-            <Image
-              src="/images/Carmax.svg"
-              fill={true}
-              alt="logo"
-              className="object-cover"
-            />
-          </a>
-        </div>
+      <nav className="flex mx-auto h-16 lg:pr-5 items-center justify-between relative border-b border-slate-200">
+        {/* <div className="flex  w-36 h-14 overflow-hidden"> */}
+        <Link href="#" className="w-36">
+          <Image
+            src={Logo}
+            alt="carMax logo"
+          />
+        </Link>
+        {/* </div> */}
         {/* mobile toggle icons */}
         <div className="lg:hidden flex pr-5">
           <button
